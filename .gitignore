@@ -6,6 +6,8 @@ node_modules/
 # Build outputs
 dist/
 build/
+
+# Model files (too large for GitHub, stored separately)
 *.pth
 
 # Environment
