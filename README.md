@@ -146,6 +146,48 @@ modal app stop action-recognition-api
 modal app delete action-recognition-api
 ```
 
+## 🌐 Deploy Web UI to Vercel
+
+The web interface is ready to deploy to [Vercel](https://vercel.com). Both root and subfolder configurations are set up.
+
+### Option 1: Deploy with Vercel Dashboard (Easiest)
+
+1. Push your latest code to your GitHub repository:
+   ```bash
+   git add .
+   git commit -m "Configure project for Vercel deployment"
+   git push
+   ```
+2. Go to [vercel.com/new](https://vercel.com/new) and import your repository: `Shoaib5602/DeepLearning-ActionRecognition-Annotation`.
+3. In **Project Settings**:
+   - **Framework Preset**: `Vite` (auto-detected via `vercel.json`)
+   - **Environment Variables** (Optional):
+     - `VITE_API_URL`: Your Modal API endpoint (e.g. `https://kooltaurion--action-recognition-api-fastapi-app.modal.run`). If left empty, it automatically defaults to the working endpoint.
+4. Click **Deploy**.
+
+> **Note**: If you choose to configure **Root Directory** in Vercel settings to `action-recognition-ui`, it will also build seamlessly using `action-recognition-ui/vercel.json`.
+
+---
+
+### Option 2: Deploy with Vercel CLI
+
+You can also deploy directly from your local terminal using `npx vercel`:
+
+```bash
+# Preview deployment:
+npx vercel
+
+# Production deployment:
+npx vercel --prod
+```
+
+When prompted:
+- Set up and deploy: **Y**
+- Which scope: *(select your Vercel account)*
+- Link to existing project: **N**
+- Project name: `action-recognition-ui`
+- In which directory is your code located: `./` (or `./action-recognition-ui`)
+
 ---
 
 **Note**: Do not modify or delete other Modal apps. This deployment creates a new separate app named `action-recognition-api`.

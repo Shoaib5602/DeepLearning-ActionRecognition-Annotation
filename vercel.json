@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "buildCommand": "npm --prefix action-recognition-ui run build",
+  "outputDirectory": "action-recognition-ui/dist",
+  "installCommand": "npm --prefix action-recognition-ui install",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

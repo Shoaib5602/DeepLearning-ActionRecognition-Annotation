@@ -1,0 +1,10 @@
+{
+  "name": "action-recognition-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "npm --prefix action-recognition-ui run build",
+    "dev": "npm --prefix action-recognition-ui run dev",
+    "preview": "npm --prefix action-recognition-ui run preview"
+  }
+}

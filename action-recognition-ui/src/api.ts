@@ -1,4 +1,7 @@
-export const API_URL = 'https://kooltaurion--action-recognition-api-fastapi-app.modal.run';
+export const API_URL = 
+  import.meta.env.VITE_API_URL || 
+  'https://kooltaurion--action-recognition-api-fastapi-app.modal.run';
+
 
 export interface PredictionResult {
   prediction: string;
